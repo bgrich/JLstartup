@@ -5,6 +5,15 @@
 #' This function calculates the Gaussian fit of the provided data. It uses
 #' \code{\link[stats]{dnorm}} calculate the Gaussian profile and optimizes
 #' it. This version contains a y-offset optimization.
+#'
+#' @param x A numeric vector. The x-axis of the data to be fit.
+#' @param y A numeric vector. The y-axis of the data to be fit.
+#' @param mu A numeric. A starting guess for the mean of the Gaussian.
+#' @param sig A numeric. A starting guess for the standard deviation of the
+#' Gaussian.
+#' @param scale A numeric. A starting guess for the ampltidue scaling of the
+#' Gaussian.
+#' @param yoff A numeric. A starting guess for the offset from the y-axis.
 
 
 fitG <- function(x, y, mu, sig, scale, yoff){
