@@ -2,8 +2,7 @@ Package: JLstartup
 Type: Package
 Title: Start-up Functions for Analysis
 Version: 0.1.0
-Author: Brian Richards
-Maintainer: brian.g.richards@gmail.com
+Authors@R: person("Brian", "Richards", email = "brian.g.richards@gmail.com", role = c("aut", "cre"))
 Description: More about what it does (maybe more than one line)
 License: What license is it under?
 LazyData: TRUE
