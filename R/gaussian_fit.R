@@ -2,7 +2,9 @@
 #'
 #' \code{fitG} calculates the Gaussian fit
 #'
-#' This function calculated the Gaussian fit of the provided data.
+#' This function calculates the Gaussian fit of the provided data. It uses
+#' \code{\link[stats]{dnorm}} calculate the Gaussian profile and optimizes
+#' it. This version contains a y-offset optimization.
 
 
 fitG <- function(x, y, mu, sig, scale, yoff){
