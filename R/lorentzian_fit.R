@@ -1,18 +1,18 @@
-#' Gaussian Fit
+#' Lorentzian/Cauchy Fit
 #'
-#' \code{fitG} calculates the Gaussian fit
+#' \code{fitCauchy} calculates the Lorentzian/Cauchy fit
 #'
-#' This function calculates the Gaussian fit of the provided data. It uses
-#' \code{\link[stats]{dnorm}} calculate the Gaussian profile and optimizes
-#' it. This version contains a y-offset optimization.
+#' This function calculates the Lorentzian/Cauchy fit of the provided data. It
+#' uses \code{\link[stats]{dcauchy}} to calculate the Lorentzian/Cauchy
+#' profile and optimizes it. This version contains a y-offset optimization.
 #'
 #' @param x A numeric vector. The x-axis of the data to be fit.
 #' @param y A numeric vector. The y-axis of the data to be fit.
-#' @param mu A numeric. A starting guess for the mean of the Gaussian.
-#' @param sig A numeric. A starting guess for the standard deviation of the
-#' Gaussian.
-#' @param scale A numeric. A starting guess for the ampltidue scaling of the
-#' Gaussian.
+#' @param center A numeric. A starting guess for the center of the Lorentzian.
+#' @param hwhm A numeric. A starting guess for the half-width at half-max of
+#' the Lorentzian.
+#' @param height A numeric. A starting guess for the ampltidue scaling of the
+#' Lorentzian.
 #' @param yoff A numeric. A starting guess for the offset from the y-axis.
 fitCauchy <- function(x, y, center, hwhm, height, yoff){
 
