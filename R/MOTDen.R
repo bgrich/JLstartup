@@ -1,7 +1,27 @@
-#This is an R implementation of the pcamera function/script written by
-#Mary Kutteruf for Matlab.
-#Requires caTools (for trapz), dplyr, and fitGaussian script to be loaded
-#Last Edited 05/22/2015
+#' MOT Density Calculation
+#'
+#' \code{MOTDen} calculates the density of Rydberg atoms in the MOT.
+#'
+#' This function calculates the density of Rydberg atoms in the MOT for a
+#' given MOT trace. It takes a data frame and, using
+#' \code{\link[caTools]{trapz}} and \code{\link{fitG}}, computes the
+#' integral of the MOT fluorescence and it's full-width at half-maximum
+#' (FWHM). To get the total integral of the MOT, it is assumed that the MOT is
+#' a Gaussian in all dimensions. It then calculates the total number of atoms
+#' by converting the integral of the MOT fluorescence into the power and
+#' dividing that by the power per photon emitted. The number of Rydberg atoms
+#' takes the total number of atoms and divides it by 3.5. This is a compromise
+#' between cases where 1/3 of the atoms enter the Rydberg state and 1/4 of
+#' the atoms enter the Rydberg state.
+#'
+#' The function returns the density in atoms/cm$^{-1}$.
+#'
+#' Note: This is only for excitation to a single Rydberg state! For
+#' excitation to multiple states, the number of Rydberg atoms compared to the
+#' total number of atoms needs to be adjusted.
+#'
+#' This is an R implementation of the pcamera function/script written by Mary
+#' Kutteruf for Matlab.
 
 MOTDen <- function(MOTDataFrame){
   #Converts the MOT file into a dplyr data frame
