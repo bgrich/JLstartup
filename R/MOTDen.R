@@ -14,7 +14,7 @@
 #' between cases where 1/3 of the atoms enter the Rydberg state and 1/4 of
 #' the atoms enter the Rydberg state.
 #'
-#' The function returns the density in atoms/cm$^{-1}$.
+#' The function returns the density in atoms/cm\eqn{$^{-1}$}.
 #'
 #' Note: This is only for excitation to a single Rydberg state! For
 #' excitation to multiple states, the number of Rydberg atoms compared to the
