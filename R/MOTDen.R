@@ -95,4 +95,6 @@ MOTDen <- function(MOTDataFrame){
 
   #Rydberg Density
   den <- NRyd/V
+
+  den
 }
