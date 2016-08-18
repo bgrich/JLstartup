@@ -67,7 +67,7 @@ MOTDen <- function(MOTDataFrame){
   range <- c(startind:endind)
 
   #Performs an trapezoidal integration of the fitted curve without the y offset
-  rI <- trapz(MOT$Time[range], FitWOBackground[range])
+  rI <- caTools::trapz(MOT$Time[range], FitWOBackground[range])
 
   #rI is just the integral of a single line of the MOT as read by the camera.
   #To get the integral of the entire MOT, we assume that the camera line is
