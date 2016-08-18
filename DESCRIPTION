@@ -1,7 +1,7 @@
 Package: JLstartup
 Type: Package
 Title: Start-up Functions for Analysis
-Version: 0.1.0
+Version: 0.0.0.9000
 Authors@R: person("Brian", "Richards", email = "brian.g.richards@gmail.com", role = c("aut", "cre"))
 Description: This is a package that provides a few functions used in the analysis
   for several Jones Lab projects.
