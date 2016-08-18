@@ -35,7 +35,8 @@ MOTDen <- function(MOTDataFrame){
   MOT$Time <- MOT$Time * 1e6
 
   #Filters the MOT data frame such that only rows with index greater or equal to 140 are included
-  MOT <- filter(MOT, index >= 140)
+  MOT <- MOT %>%
+    dplyr::filter(index >= 140)
 
   initialXOff <- MOT$Time[which.max(MOT$Signal)]
   initialYOff <- mean(MOT$Signal[which(MOT$Time > 22)])
