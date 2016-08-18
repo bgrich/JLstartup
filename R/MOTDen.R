@@ -74,7 +74,8 @@ MOTDen <- function(MOTDataFrame){
   #some surface at y=0 and that the MOT is a symmetric Gaussian.
   #We can determine the integral of the MOT in the xdirection by scaling
   #normalizing the fitted curve to 1 and integrating once more.
-  rDeltax <- trapz(MOT$Time[range], FitWOBackground[range] / max(FitWOBackground))
+  rDeltax <- caTools::trapz(MOT$Time[range],
+                            FitWOBackground[range] / max(FitWOBackground))
 
   #We get the total integral by multiplying the integral in the x direction and in the y (rDeltax and rI respectively)
   rItot <- rDeltax * rI
