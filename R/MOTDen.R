@@ -25,7 +25,7 @@
 
 MOTDen <- function(MOTDataFrame){
   #Converts the MOT file into a dplyr data frame
-  MOT <- tbl_df(MOTDataFrame)
+  MOT <- tibble::as_tibble(MOTDataFrame)
 
   #Adds a column with the index
   MOT <- mutate(MOT, index = c(1:length(Time)))
