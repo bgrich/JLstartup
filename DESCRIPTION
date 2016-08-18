@@ -3,7 +3,8 @@ Type: Package
 Title: Start-up Functions for Analysis
 Version: 0.1.0
 Authors@R: person("Brian", "Richards", email = "brian.g.richards@gmail.com", role = c("aut", "cre"))
-Description: More about what it does (maybe more than one line)
+Description: This is a package that provides a few functions used in the analysis
+  for several Jones Lab projects.
 License: What license is it under?
 LazyData: TRUE
 RoxygenNote: 5.0.1
