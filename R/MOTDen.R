@@ -28,7 +28,8 @@ MOTDen <- function(MOTDataFrame){
   MOT <- tibble::as_tibble(MOTDataFrame)
 
   #Adds a column with the index
-  MOT <- mutate(MOT, index = c(1:length(Time)))
+  MOT <- MOT %>%
+    dplyr::mutate(index = c(1:length(Time)))
 
   #Convert time from seconds to microseconds
   MOT$Time <- MOT$Time * 1e6
