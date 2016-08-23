@@ -1,4 +1,4 @@
-#' Derivative
+#' First Derivative
 #'
 #' Take the first derivative of y(x)
 #'
