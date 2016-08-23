@@ -1,4 +1,8 @@
-
+#' Width Measurement (FWHM and HWHM)
+#'
+#' Returns the width of a given spectrum.
+#'
+#' These functions provide
 ##Determines the Full-Width at Half-Maximum (FWHM) of a peak
 
 FWHM <- function(spectrum){
