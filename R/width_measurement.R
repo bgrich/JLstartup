@@ -1,4 +1,4 @@
-#' Width Measurement (FWHM and HWHM)
+#' FWHM and HWHM
 #'
 #' Returns the width of a given spectrum.
 #'
