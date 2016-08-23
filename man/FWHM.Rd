@@ -4,7 +4,7 @@
 \alias{FWHM}
 \alias{HWHMleft}
 \alias{HWHMright}
-\title{Width Measurement (FWHM and HWHM)}
+\title{FWHM and HWHM}
 \usage{
 FWHM(spectrum)
 
