@@ -24,7 +24,7 @@ fitCauchy <- function(x, y, center, hwhm, height, yoff){
   optim(c(center, hwhm, height, yoff), f)
 }
 
-#' @describeIn fitCauchy A Lorentzian/Cauchy fit without the y-offset.
+#' @rdname fitCauchy
 fitCauchy2 <- function(x, y, center, hwhm, height){
 
   f = function(p){
