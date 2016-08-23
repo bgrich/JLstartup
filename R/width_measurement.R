@@ -72,6 +72,17 @@ HWHMright <- function(spectrum){
   return(abs(maxpos - xright))
 }
 
+#' Width Measurement
+#'
+#' Returns the full-width at half-maximum
+#'
+#' This function returns the full-width at half-maximum of a given spectrum.
+#' It initially calls \code{\link{FWHM}}. If this function provides a NA width,
+#' then \code{\link{HWHMleft}} is called and multiplied by 2. If that also
+#' returns a NA width, \code{\link{HWHMright}} is called and multiplied by 2.
+#'
+#' @param spectrum a numeric matrix. The x and y coordinates of the function
+#' whose width is to be measured.
 WidthMeasure <- function(spectrum) {
   width <- FWHM(spectrum)
   if (is.na(width)) {
