@@ -24,7 +24,7 @@ fitG <- function(x, y, mu, sig, scale, yoff){
   optim(p = c(mu, sig, scale, yoff), f)
 }
 
-#' @describeIn fitG A Gaussian fit without the y-offset.
+#' @rdname fitG
 fitG2 <- function(x, y, mu, sig, scale){
 
   f = function(p){
