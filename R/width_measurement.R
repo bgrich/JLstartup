@@ -42,7 +42,6 @@ HWHMleft <- function(spectrum){
   maxpos <- spectrum[i, 1]
   n <- length(spectrum[, 2])
   left <- ifelse(i < 1, 1, i)
-  right <- ifelse(i > n, n, i)
 
   hm <- spectrum[i, 2] / 2
 
@@ -60,7 +59,6 @@ HWHMright <- function(spectrum){
   i <- which.max(spectrum[, 2])
   maxpos <- spectrum[i, 1]
   n <- length(spectrum[, 2])
-  left <- ifelse(i < 1, 1, i)
   right <- ifelse(i > n, n, i)
 
   hm <- spectrum[i, 2] / 2
