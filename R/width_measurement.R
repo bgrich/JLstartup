@@ -36,8 +36,7 @@ FWHM <- function(spectrum){
   return(abs(xleft - xright))
 }
 
-#Determines the Half-Width at Half-Maximum from the maximum to the half-max on the left side (lower index side)
-
+#' @rdname FWHM
 HWHMleft <- function(spectrum){
   i <- which.max(spectrum[, 2])
   maxpos <- spectrum[i, 1]
@@ -56,8 +55,7 @@ HWHMleft <- function(spectrum){
   return(abs(xleft - maxpos))
 }
 
-#Determines the Half-Width at Half-Maximum from the maximum to the half-max on the right side (higher index side)
-
+#' @rdname FWHM
 HWHMright <- function(spectrum){
   i <- which.max(spectrum[, 2])
   maxpos <- spectrum[i, 1]
