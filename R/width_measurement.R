@@ -2,7 +2,18 @@
 #'
 #' Returns the width of a given spectrum.
 #'
-#' These functions provide
+#' These functions provide the full-width at half-maximum or the half-width
+#' at half-maximum depending on the function. Given a two column matrix
+#' describing the x and y positions of a spectrum, the function finds the
+#' location of the maximum and finds the spot just below the half-max point
+#' on either side of the peak. The function \code{\link[stats]{approx}} is
+#' used to determine the actual location of the half-max point on either
+#' side of the maximum. The separation of these two points is then computed
+#' provided the full maximum. For the half-width functions, onlye the right
+#' side is computed in \code{HWHMright} and only the left side is computed
+#' in \code{HWHMleft}.
+#'
+#'
 ##Determines the Full-Width at Half-Maximum (FWHM) of a peak
 
 FWHM <- function(spectrum){
