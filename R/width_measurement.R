@@ -13,9 +13,8 @@
 #' side is computed in \code{HWHMright} and only the left side is computed
 #' in \code{HWHMleft}.
 #'
-#'
-##Determines the Full-Width at Half-Maximum (FWHM) of a peak
-
+#' @param spectrum a numeric matrix. The x and y coordinates of the function
+#' whose width is to be measured.
 FWHM <- function(spectrum){
   i <- which.max(spectrum[, 2])
   n <- length(spectrum[, 2])
