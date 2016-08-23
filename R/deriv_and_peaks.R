@@ -16,6 +16,15 @@ Deriv1 <- function(x, y){
        y = y.prime)
 }
 
+#' Peaks
+#'
+#' Determines the location of the peaks of a provided data set.
+#'
+#' This function returns the location of the peaks of provided spectrum.
+#'
+#' @param series a numeric. The spectrum to be analyzed.
+#' @param span,
+
 peaks <- function(series, span = 3){
   z <- embed(series, span)
   s <- span %/% 2
