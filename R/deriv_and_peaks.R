@@ -1,5 +1,14 @@
-# First derivative.  Adjust x values to be center of interval.
-# Spacing of x-points need not be uniform
+#' Derivative
+#'
+#' Take the first derivative of y(x)
+#'
+#' This function takes the first derivative of an arbitrary function y(x).
+#' The spacing of the x-points do not need to be uniform for the function to
+#' work. The function computes the derivative by calculating
+#' y' = (y2 - y1)/(x2 - x1).
+#'
+#' @param x a numeric vector. The x values for the arbitrary function y(x).
+#' @param y a numeric vector. The y values for the arbitrary function y(x).
 Deriv1 <- function(x, y){
   y.prime <- diff(y) / diff(x)
   x.prime <- x[-length(x)] + diff(x) / 2
