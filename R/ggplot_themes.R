@@ -17,15 +17,15 @@ report_theme <- ggplot2::theme_bw() +
                                                           linetype = "dotted"))
 
 #' @rdname report_theme
-publication_theme <- theme_bw() +
-  theme(text = element_text(family = "Times"),
-        axis.title = element_text(size = 13),
-        axis.text = element_text(size = 8),
-        plot.title = element_text(size = 8)) +
-  theme(legend.position = "none",
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        panel.border = element_rect(color = "black"),
-        axis.ticks.length = unit(-0.15, "cm"),
-        axis.text.x = element_text(margin = margin(t = 0.25, unit = "cm")),
-        axis.text.y = element_text(margin = margin(r = 0.25, unit = "cm")))
+publication_theme <- ggplot2::theme_bw() +
+  ggplot2::theme(text = ggplot2::element_text(family = "Times"),
+        axis.title = ggplot2::element_text(size = 13),
+        axis.text = ggplot2::element_text(size = 8),
+        plot.title = ggplot2::element_text(size = 8)) +
+  ggplot2::theme(legend.position = "none",
+        panel.grid.major = ggplot2::element_blank(),
+        panel.grid.minor = ggplot2::element_blank(),
+        panel.border = ggplot2::element_rect(color = "black"),
+        axis.ticks.length = grid::unit(-0.15, "cm"),
+        axis.text.x = ggplot2::element_text(margin = ggplot2::margin(t = 0.25, unit = "cm")),
+        axis.text.y = ggplot2::element_text(margin = ggplot2::margin(r = 0.25, unit = "cm")))
