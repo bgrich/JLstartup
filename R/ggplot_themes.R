@@ -7,6 +7,11 @@
 #' and represents a fairly simple mix of the black and white theme from ggplot2
 #' and changing the borders to black and the grid lines to black and dotted.
 #'
+#' Note: To change the text of the figure use:
+#' \code{theme(text = element_text(family = "Times"))} where the family
+#' Times has been set using
+#' \code{windowsFonts(Times = windowsFont("TT Times New Roman"))}.
+#'
 #' @export
 report_theme <- ggplot2::theme_bw() +
   ggplot2::theme(panel.border = ggplot2::element_rect(color = "black",
