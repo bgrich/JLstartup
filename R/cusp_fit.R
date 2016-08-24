@@ -14,7 +14,7 @@ dcusp <- Vectorize(function(x, width, xoff){
   if (A == Inf) {
     1 / 2
   } else {
-    (A/2) * (Ci(A) * sin(A) + (pi / 2 - Si(A)) * cos(A))
+    (A/2) * (gsl::Ci(A) * sin(A) + (pi / 2 - gsl::Si(A)) * cos(A))
   }
 })
 
