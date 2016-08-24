@@ -2,11 +2,14 @@
 % Please edit documentation in R/ggplot_themes.R
 \docType{data}
 \name{report_theme}
+\alias{publication_theme}
 \alias{report_theme}
 \title{ggplot Themes}
 \format{An object of class \code{theme} (inherits from \code{gg}) of length 44.}
 \usage{
 report_theme
+
+publication_theme
 }
 \description{
 Creates objects that are ggplot themes to be used in figures
@@ -16,6 +19,11 @@ These themes are a set of commonly used parameters used in reports and
 publications. The \code{report_theme} is for use with R markdown reports
 and represents a fairly simple mix of the black and white theme from ggplot2
 and changing the borders to black and the grid lines to black and dotted.
+
+Note: To change the text of the figure use:
+\code{theme(text = element_text(family = "Times"))} where the family
+Times has been set using
+\code{windowsFonts(Times = windowsFont("TT Times New Roman"))}.
 }
 \keyword{datasets}
 
