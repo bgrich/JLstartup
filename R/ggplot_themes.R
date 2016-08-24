@@ -23,8 +23,7 @@ report_theme <- ggplot2::theme_bw() +
 
 #' @rdname report_theme
 publication_theme <- ggplot2::theme_bw() +
-  ggplot2::theme(text = ggplot2::element_text(family = "Times"),
-                 axis.title = ggplot2::element_text(size = 13),
+  ggplot2::theme(axis.title = ggplot2::element_text(size = 13),
                  axis.text = ggplot2::element_text(size = 8),
                  plot.title = ggplot2::element_text(size = 8)) +
   ggplot2::theme(legend.position = "none",
