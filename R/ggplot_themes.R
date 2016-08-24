@@ -1,8 +1,11 @@
-#' Report Theme
+#' ggplot Themes
 #'
-#' Theme
+#' Creates objects that are ggplot themes to be used in figures
 #'
-#' Theme Descript
+#' These themes are a set of commonly used parameters used in reports and
+#' publications. The \code{report_theme} is for use with R markdown reports
+#' and represents a fairly simple mix of the black and white theme from ggplot2
+#' and changing the borders to black and the grid lines to black and dotted.
 #'
 #' @export
 report_theme <- ggplot2::theme_bw() +
