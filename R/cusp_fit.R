@@ -50,6 +50,7 @@ fitCusp <- function(x, y, height, width, xoff, yoff){
         ydat = y)
 }
 
+#' @rdname fitCusp
 fitCusp2 <- function(x, y, height, width, xoff, yoff){
 
   f <- function(xdat, ydat, par){
@@ -64,7 +65,7 @@ fitCusp2 <- function(x, y, height, width, xoff, yoff){
         ydat = y)
 }
 
-#Fit for cusp lineshape with no y offset
+#' @rdname fitCusp
 fitCusp3 <- function(x, y, height, width, xoff){
 
   f <- function(xdat, ydat, par){
