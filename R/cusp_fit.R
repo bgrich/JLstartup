@@ -18,7 +18,15 @@ dcusp <- Vectorize(function(x, width, xoff){
   }
 })
 
-##Fit for Cusp Lineshape
+#' Cusp Line Shape Fit
+#'
+#' Performs a fit to the cusp line shape \code{\link{dcusp}}
+#'
+#' These functions perform fits of provided data to the cusp line shape
+#' \code{\link{dcusp}} using \code{\link[stats]{optim}}. The base version
+#' of \code{fitCusp} using a max iteration number of 300 in \code{optim}.
+#' \code{fitCusp2} uses a max iteration number of 1000. \code{fitCusp3}
+#' also uses a max iteration number of 1000, but removes the y-offset.
 fitCusp <- function(x, y, height, width, xoff, yoff){
 
   f = function(xdat, ydat, par){
