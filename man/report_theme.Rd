@@ -3,16 +3,19 @@
 \docType{data}
 \name{report_theme}
 \alias{report_theme}
-\title{Report Theme}
+\title{ggplot Themes}
 \format{An object of class \code{theme} (inherits from \code{gg}) of length 44.}
 \usage{
 report_theme
 }
 \description{
-Theme
+Creates objects that are ggplot themes to be used in figures
 }
 \details{
-Theme Descript
+These themes are a set of commonly used parameters used in reports and
+publications. The \code{report_theme} is for use with R markdown reports
+and represents a fairly simple mix of the black and white theme from ggplot2
+and changing the borders to black and the grid lines to black and dotted.
 }
 \keyword{datasets}
 
