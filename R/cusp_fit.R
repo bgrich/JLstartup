@@ -39,7 +39,7 @@ dcusp <- Vectorize(function(x, width, xoff){
 fitCusp <- function(x, y, height, width, xoff, yoff){
 
   f = function(xdat, ydat, par){
-    d = 2 * par[1] * dcusp(xdat, width = par[2], xoff = par[3]) + par[4]
+    d = 2 * par[1] * JLstartup::dcusp(xdat, width = par[2], xoff = par[3]) + par[4]
     sum((d - ydat) ^ 2)
   }
 
@@ -54,7 +54,7 @@ fitCusp <- function(x, y, height, width, xoff, yoff){
 fitCusp2 <- function(x, y, height, width, xoff, yoff){
 
   f <- function(xdat, ydat, par){
-    d = 2 * par[1] * dcusp(xdat, width = par[2], xoff = par[3]) + par[4]
+    d = 2 * par[1] * JLstartup::dcusp(xdat, width = par[2], xoff = par[3]) + par[4]
     sum((d - ydat) ^ 2)
   }
 
@@ -69,7 +69,7 @@ fitCusp2 <- function(x, y, height, width, xoff, yoff){
 fitCusp3 <- function(x, y, height, width, xoff){
 
   f <- function(xdat, ydat, par){
-    d = 2 * par[1] * dcusp(xdat, width = par[2], xoff = par[3])
+    d = 2 * par[1] * JLstartup::dcusp(xdat, width = par[2], xoff = par[3])
     sum((d - ydat) ^ 2)
   }
 
