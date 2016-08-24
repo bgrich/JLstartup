@@ -27,6 +27,15 @@ dcusp <- Vectorize(function(x, width, xoff){
 #' of \code{fitCusp} using a max iteration number of 300 in \code{optim}.
 #' \code{fitCusp2} uses a max iteration number of 1000. \code{fitCusp3}
 #' also uses a max iteration number of 1000, but removes the y-offset.
+#'
+#' @param x a numeric vector. The x coordinates to be fit.
+#' @param y a numeric vector. The y coordinates to be fit.
+#' @param height a numeric. An initial guess to the height of the distribution.
+#' @param width a numeric. An initial guess to the width of the distribution.
+#' @param xoff a numeric. An initial guess to the x-offset of the
+#' distribution.
+#' @param yoff a numeric. An initial guess to the y-offset of the
+#' distribution.
 fitCusp <- function(x, y, height, width, xoff, yoff){
 
   f = function(xdat, ydat, par){
