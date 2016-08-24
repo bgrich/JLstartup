@@ -22,6 +22,7 @@ report_theme <- ggplot2::theme_bw() +
                                                           linetype = "dotted"))
 
 #' @rdname report_theme
+#' @export
 publication_theme <- ggplot2::theme_bw() +
   ggplot2::theme(axis.title = ggplot2::element_text(size = 13),
                  axis.text = ggplot2::element_text(size = 8),
