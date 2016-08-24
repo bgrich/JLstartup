@@ -6,7 +6,9 @@
 #' \href{http://journals.aps.org/pra/abstract/10.1103/PhysRevA.93.042505}{Dipole-dipole resonance line shapes in a cold Rydberg gas} by Richards and Jones.
 #'
 #' @param x a numeric. The position at which the distribution is calculated.
-#' @param width a numeric. The width of the line shape.
+#' @param width a numeric. The width of the line shape. The width parameter is
+#' related to the full-width at half-maximum (FWHM) by width = FWHM / 3.09.
+#' @param xoff a numeric. The offset of the distribution along the x-axis.
 dcusp <- Vectorize(function(x, width, xoff){
   A <- width / abs(x - xoff)
   if (A == Inf) {
