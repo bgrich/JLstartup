@@ -1,4 +1,9 @@
-#Dipole-dipole cusp form distribution
+#' Dipole-dipole Cusp Line Shape
+#'
+#' Returns a cusp-like line shape
+#'
+#' \code{dcusp} provides the cusp-like line shape used in
+#' \href{http://journals.aps.org/pra/abstract/10.1103/PhysRevA.93.042505}{Dipole-dipole resonance line shapes in a cold Rydberg gas} by Richards and Jones.
 dcusp <- Vectorize(function(x, width, xoff){
   A <- width / abs(x - xoff)
   if (A == Inf) {
