@@ -12,4 +12,5 @@ Imports:
   dplyr,
   tibble,
   caTools,
-  gsl
+  gsl,
+  ggplot2
