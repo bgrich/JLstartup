@@ -15,3 +15,6 @@ report_theme <- ggplot2::theme_bw() +
                                                           linetype = "dotted"),
                  panel.grid.minor = ggplot2::element_line(color = "black",
                                                           linetype = "dotted"))
+
+#' @rdname report_theme
+publication_theme
