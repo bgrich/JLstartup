@@ -13,4 +13,5 @@ Imports:
   tibble,
   caTools,
   gsl,
-  ggplot2
+  ggplot2,
+  grid
