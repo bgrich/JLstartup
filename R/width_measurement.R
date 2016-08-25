@@ -15,6 +15,8 @@
 #'
 #' @param spectrum a numeric matrix. The x and y coordinates of the function
 #' whose width is to be measured.
+#'
+#' @export
 FWHM <- function(spectrum){
   i <- which.max(spectrum[, 2])
   n <- length(spectrum[, 2])
@@ -37,6 +39,7 @@ FWHM <- function(spectrum){
 }
 
 #' @rdname FWHM
+#' @export
 HWHMleft <- function(spectrum){
   i <- which.max(spectrum[, 2])
   maxpos <- spectrum[i, 1]
@@ -55,6 +58,7 @@ HWHMleft <- function(spectrum){
 }
 
 #' @rdname FWHM
+#' @export
 HWHMright <- function(spectrum){
   i <- which.max(spectrum[, 2])
   maxpos <- spectrum[i, 1]
@@ -83,6 +87,8 @@ HWHMright <- function(spectrum){
 #'
 #' @param spectrum a numeric matrix. The x and y coordinates of the function
 #' whose width is to be measured.
+#'
+#' @export
 WidthMeasure <- function(spectrum) {
   width <- FWHM(spectrum)
   if (is.na(width)) {
