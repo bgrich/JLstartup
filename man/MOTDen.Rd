@@ -6,6 +6,10 @@
 \usage{
 MOTDen(MOTDataFrame)
 }
+\arguments{
+\item{MOTDataFrame}{a data frame. This data frame includes both the time
+axis (x-axis) and the voltage/signal axis (y-axis)}
+}
 \description{
 \code{MOTDen} calculates the density of Rydberg atoms in the MOT.
 }
