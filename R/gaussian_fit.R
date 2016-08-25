@@ -14,6 +14,8 @@
 #' @param scale A numeric. A starting guess for the ampltidue scaling of the
 #' Gaussian.
 #' @param yoff A numeric. A starting guess for the offset from the y-axis.
+#'
+#' @export
 fitG <- function(x, y, mu, sig, scale, yoff){
 
   f = function(p){
@@ -25,6 +27,7 @@ fitG <- function(x, y, mu, sig, scale, yoff){
 }
 
 #' @rdname fitG
+#' @export
 fitG2 <- function(x, y, mu, sig, scale){
 
   f = function(p){
