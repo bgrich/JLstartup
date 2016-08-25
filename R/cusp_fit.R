@@ -9,6 +9,8 @@
 #' @param width a numeric. The width of the line shape. The width parameter is
 #' related to the full-width at half-maximum (FWHM) by width = FWHM / 3.09.
 #' @param xoff a numeric. The offset of the distribution along the x-axis.
+#'
+#' @export
 dcusp <- Vectorize(function(x, width, xoff){
   A <- width / abs(x - xoff)
   if (A == Inf) {
@@ -36,6 +38,8 @@ dcusp <- Vectorize(function(x, width, xoff){
 #' distribution.
 #' @param yoff a numeric. An initial guess to the y-offset of the
 #' distribution.
+#'
+#' @export
 fitCusp <- function(x, y, height, width, xoff, yoff){
 
   f = function(xdat, ydat, par){
@@ -51,6 +55,7 @@ fitCusp <- function(x, y, height, width, xoff, yoff){
 }
 
 #' @rdname fitCusp
+#' @export
 fitCusp2 <- function(x, y, height, width, xoff, yoff){
 
   f <- function(xdat, ydat, par){
@@ -66,6 +71,7 @@ fitCusp2 <- function(x, y, height, width, xoff, yoff){
 }
 
 #' @rdname fitCusp
+#' @export
 fitCusp3 <- function(x, y, height, width, xoff){
 
   f <- function(xdat, ydat, par){
