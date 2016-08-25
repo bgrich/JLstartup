@@ -14,6 +14,8 @@
 #' @param height A numeric. A starting guess for the ampltidue scaling of the
 #' Lorentzian.
 #' @param yoff A numeric. A starting guess for the offset from the y-axis.
+#'
+#' @export
 fitCauchy <- function(x, y, center, hwhm, height, yoff){
 
   f = function(p){
@@ -25,6 +27,7 @@ fitCauchy <- function(x, y, center, hwhm, height, yoff){
 }
 
 #' @rdname fitCauchy
+#' @export
 fitCauchy2 <- function(x, y, center, hwhm, height){
 
   f = function(p){
