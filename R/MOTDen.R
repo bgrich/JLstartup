@@ -22,6 +22,11 @@
 #'
 #' This is an R implementation of the pcamera function/script written by Mary
 #' Kutteruf for Matlab.
+#'
+#' @param MOTDataFrame a data frame. This data frame includes both the time
+#' axis (x-axis) and the voltage/signal axis (y-axis)
+#'
+#' @export
 
 MOTDen <- function(MOTDataFrame){
   #Converts the MOT file into a dplyr data frame
