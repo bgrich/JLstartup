@@ -4,11 +4,14 @@
 \alias{MOTDen}
 \title{MOT Density Calculation}
 \usage{
-MOTDen(MOTDataFrame)
+MOTDen(MOTDataFrame, show_plot = FALSE)
 }
 \arguments{
 \item{MOTDataFrame}{a data frame. This data frame includes both the time
 axis (x-axis) and the voltage/signal axis (y-axis)}
+
+\item{show_plot}{a logical. This option produces a plot of the original
+data and the new gaussian fit if set to TRUE.}
 }
 \description{
 \code{MOTDen} calculates the density of Rydberg atoms in the MOT.
