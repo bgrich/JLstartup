@@ -25,6 +25,8 @@
 #'
 #' @param MOTDataFrame a data frame. This data frame includes both the time
 #' axis (x-axis) and the voltage/signal axis (y-axis)
+#' @param show_plot a logical. This option produces a plot of the original
+#' data and the new gaussian fit if set to TRUE.
 #'
 #' @export
 
