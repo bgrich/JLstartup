@@ -28,7 +28,7 @@
 #'
 #' @export
 
-MOTDen <- function(MOTDataFrame){
+MOTDen <- function(MOTDataFrame, show_plot = FALSE){
   #Converts the MOT file into a dplyr data frame
   MOT <- tibble::as_tibble(MOTDataFrame)
 
@@ -60,8 +60,10 @@ MOTDen <- function(MOTDataFrame){
   FitCurve <- A * sqrt(2 * pi) * c * dnorm(MOT$Time, mean = xoffset, sd = c) + yoffset
 
   #Plots the original data as points and the fitted curve as an overlaid line
+  if (show_plot) {
   plot(MOT$Time, MOT$Signal)
   lines(MOT$Time, FitCurve, col = 2)
+  }
 
   #Subtracts the y offset value from the fitted curve
   FitWOBackground <- FitCurve - yoffset
