@@ -30,16 +30,15 @@
 #'
 #' @export
 
-MOTDen <- function(MOTDataFrame, show_plot = FALSE){
-  #Converts the MOT file into a dplyr data frame
-  MOT <- tibble::as_tibble(MOTDataFrame)
-
-  #Adds a column with the index
-  MOT <- MOT %>%
-    dplyr::mutate(index = c(1:length(Time)))
+MOTDen <- function(Time, Signal, show_plot = FALSE){
+  # Creates a tibble for the MOT trace and adds an index column
+  MOT <- tibble::tibble(Time = Time,
+                Signal = Signal) %>%
+    dplyr::mutate(index = c(1:n()))
 
   #Convert time from seconds to microseconds
-  MOT$Time <- MOT$Time * 1e6
+  MOT <- MOT %>%
+    dplyr::mutate(Time = Time * 1e6)
 
   #Filters the MOT data frame such that only rows with index greater or equal to 140 are included
   MOT <- MOT %>%
