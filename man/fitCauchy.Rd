@@ -32,4 +32,3 @@ This function calculates the Lorentzian/Cauchy fit of the provided data. It
 uses \code{\link[stats]{dcauchy}} to calculate the Lorentzian/Cauchy
 profile and optimizes it. This version contains a y-offset optimization.
 }
-

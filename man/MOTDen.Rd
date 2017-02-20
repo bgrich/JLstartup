@@ -38,4 +38,3 @@ total number of atoms needs to be adjusted.
 This is an R implementation of the pcamera function/script written by Mary
 Kutteruf for Matlab.
 }
-

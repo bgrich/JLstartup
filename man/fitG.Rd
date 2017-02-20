@@ -32,4 +32,3 @@ This function calculates the Gaussian fit of the provided data. It uses
 \code{\link[stats]{dnorm}} calculate the Gaussian profile and optimizes
 it. This version contains a y-offset optimization.
 }
-

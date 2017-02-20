@@ -31,4 +31,3 @@ provided the full maximum. For the half-width functions, onlye the right
 side is computed in \code{HWHMright} and only the left side is computed
 in \code{HWHMleft}.
 }
-

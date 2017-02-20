@@ -2,10 +2,10 @@
 % Please edit documentation in R/ggplot_themes.R
 \docType{data}
 \name{report_theme}
-\alias{publication_theme}
 \alias{report_theme}
+\alias{publication_theme}
 \title{ggplot Themes}
-\format{An object of class \code{theme} (inherits from \code{gg}) of length 44.}
+\format{An object of class \code{theme} (inherits from \code{gg}) of length 57.}
 \usage{
 report_theme
 
@@ -26,4 +26,3 @@ Times has been set using
 \code{windowsFonts(Times = windowsFont("TT Times New Roman"))}.
 }
 \keyword{datasets}
-

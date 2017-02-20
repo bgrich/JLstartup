@@ -37,4 +37,3 @@ of \code{fitCusp} using a max iteration number of 300 in \code{optim}.
 \code{fitCusp2} uses a max iteration number of 1000. \code{fitCusp3}
 also uses a max iteration number of 1000, but removes the y-offset.
 }
-

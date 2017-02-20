@@ -21,4 +21,3 @@ Returns a cusp-like line shape
 \code{dcusp} provides the cusp-like line shape used in
 \href{http://journals.aps.org/pra/abstract/10.1103/PhysRevA.93.042505}{Dipole-dipole resonance line shapes in a cold Rydberg gas} by Richards and Jones.
 }
-

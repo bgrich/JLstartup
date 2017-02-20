@@ -19,4 +19,3 @@ It initially calls \code{\link{FWHM}}. If this function provides a NA width,
 then \code{\link{HWHMleft}} is called and multiplied by 2. If that also
 returns a NA width, \code{\link{HWHMright}} is called and multiplied by 2.
 }
-
