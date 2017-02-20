@@ -1,6 +1,6 @@
-#' MOT Density Calculation
+#' MOT Density Calculation for use with dplyr
 #'
-#' \code{MOTDen} calculates the density of Rydberg atoms in the MOT.
+#' \code{MOTDen_dplyr} calculates the density of Rydberg atoms in the MOT.
 #'
 #' This function calculates the density of Rydberg atoms in the MOT for a
 #' given MOT trace. It takes a data frame and, using
@@ -16,6 +16,8 @@
 #'
 #' The function returns the density in atoms/cm\eqn{^{-1}}.
 #'
+#' This version of the MOT density code is for use with a tibble and dplyr.
+#'
 #' Note: This is only for excitation to a single Rydberg state! For
 #' excitation to multiple states, the number of Rydberg atoms compared to the
 #' total number of atoms needs to be adjusted.
@@ -23,14 +25,14 @@
 #' This is an R implementation of the pcamera function/script written by Mary
 #' Kutteruf for Matlab.
 #'
-#' @param MOTDataFrame a data frame. This data frame includes both the time
-#' axis (x-axis) and the voltage/signal axis (y-axis)
+#' @param Time a vector. This is the the time axis (x-axis)
+#' @param Signal a vector. This is the voltage/signal axis (y-axis)
 #' @param show_plot a logical. This option produces a plot of the original
 #' data and the new gaussian fit if set to TRUE.
 #'
 #' @export
 
-MOTDen <- function(Time, Signal, show_plot = FALSE){
+MOTDen_dplyr <- function(Time, Signal, show_plot = FALSE){
   # Creates a tibble for the MOT trace and adds an index column
   MOT <- tibble::tibble(Time = Time,
                 Signal = Signal) %>%
