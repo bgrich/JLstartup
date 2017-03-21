@@ -4,7 +4,7 @@
 \alias{MOTDen_dplyr}
 \title{MOT Density Calculation for use with dplyr}
 \usage{
-MOTDen_dplyr(Time, Signal, show_plot = FALSE)
+MOTDen_dplyr(Time, Signal, show_plot = FALSE, density_only = TRUE)
 }
 \arguments{
 \item{Time}{a vector. This is the the time axis (x-axis)}
@@ -13,6 +13,11 @@ MOTDen_dplyr(Time, Signal, show_plot = FALSE)
 
 \item{show_plot}{a logical. This option produces a plot of the original
 data and the new gaussian fit if set to TRUE.}
+
+\item{density_only}{a logical. This option changes the output of the
+function. When TRUE, the function only outputs the density. When FALSE, the
+function outputs a list containing the density, the total number of atoms,
+and the half-width-half-max of the MOT in cm.}
 }
 \description{
 \code{MOTDen_dplyr} calculates the density of Rydberg atoms in the MOT.
