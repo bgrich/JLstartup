@@ -112,9 +112,8 @@ MOTDen_dplyr <- function(Time, Signal, show_plot = FALSE, density_only = TRUE){
   if (density_only) {
   return(den)
   } else {
-    out <- list(Density = den, Total_Number = Na, HWHM = w)
+    out <- list(Density = den, Total_Number = Na, HWHM_cm = w)
     return(out)
   }
-
 
 }
