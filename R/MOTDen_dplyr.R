@@ -32,7 +32,7 @@
 #'
 #' @export
 
-MOTDen_dplyr <- function(Time, Signal, show_plot = FALSE){
+MOTDen_dplyr <- function(Time, Signal, show_plot = FALSE, density_only = TRUE){
   # Creates a tibble for the MOT trace and adds an index column
   MOT <- tibble::tibble(Time = Time,
                 Signal = Signal) %>%
@@ -109,5 +109,12 @@ MOTDen_dplyr <- function(Time, Signal, show_plot = FALSE){
   #Rydberg Density
   den <- NRyd/V
 
-  den
+  if (density_only) {
+  return(den)
+  } else {
+    out <- list(Density = den, Total_Number = Na, HWHM = w)
+    return(out)
+  }
+
+
 }
